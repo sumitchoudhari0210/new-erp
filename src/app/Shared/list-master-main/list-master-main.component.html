@@ -1,0 +1,59 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">List all {{ message}}</h4>
+            <p class="card-category float-right" (click)="onClickAddMasterMain(message)">+ Add New</p>
+            <p class="card-category"> Here is a list for {{message}}</p>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                  <th>
+                    ID
+                  </th>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Country
+                  </th>
+                  <th>
+                    City
+                  </th>
+                  <th>
+                    Salary
+                  </th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of masterModels" >
+                    <td>
+                        {{item.Id}}
+                    </td>
+                    <td>
+                      {{item.Name}}
+                    </td>
+                    <td>
+                      {{item.CreatedBy}}
+                    </td>
+                    <td>
+                      Oud-Turnhout
+                    </td>
+                    <td class="text-primary">
+                      $36,738
+                    </td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>

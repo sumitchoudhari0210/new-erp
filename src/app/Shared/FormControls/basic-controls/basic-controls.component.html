@@ -1,0 +1,24 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="row col-md-10  pull-left">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label class="bmd-label-floating">Name</label>
+                <input type="text" class="form-control" formControlName="Name">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <label class="bmd-label-floating">Code</label>
+                <input type="text" class="form-control" formControlName="Code">
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-2 pull-right">
+        <div class="col-md-5">
+        <button type="submit" class="btn btn-primary pull-right" [disabled]="!profileForm.valid">Submit</button>
+        </div>
+        
+    </div>
+
+  
+</form>
